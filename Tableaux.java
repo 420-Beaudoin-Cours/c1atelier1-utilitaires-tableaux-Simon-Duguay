@@ -146,18 +146,32 @@ public class Tableaux {
     }
 
     public static int fouilleSeq(int[] tab, int elem) {
-        for (int index = 0; index < tab.length; index++) {
-            if (tab[index] == elem)
-                return index;
-        }
+        int i = 0;
+        int nb;
+        do {
+            nb = tab[i];
+            if (nb == elem){
+                return i;
+            }
+            else
+                i++;
+
+        }while (i < tab.length);
         return -1;
     }
 
     public static int fouilleSeq(String[] tab, String elem) {
-        for (int index = 0; index < tab.length; index++) {
-            if (tab[index].equals(elem))
-                return index;
-        }
+        int i = 0;
+        String str;
+        do {
+            str = tab[i];
+            if (str.equals(elem)){
+                return i;
+            }
+            else
+                i++;
+
+        }while (i < tab.length);
         return -1;
     }
 
